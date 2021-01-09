@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 // adds a burger maybe modify so it does stuff with id if needed
 router.post('/api/burgers', (req, res) => {
   burger.add({
-    name: req.body.name,
+    name: req.body.burger_name,
     devoured: false
   }, result => {
       res.json({ id: result.insertId });
