@@ -1,14 +1,15 @@
-const connection = require('../config/connections');
+const connection = require('../config/connection');
+
 
 const orm = {
+
   // grab all burgers
   all: (cb) => {
     const queryString = "SELECT * FROM burgers";
-
-    connection.query(queryString, (err, res) => {
+    
+    connection.query(queryString, (err, result) => {
       if (err) throw err;
-
-      cb(res);
+      cb(result);
     });
   },
 
@@ -18,22 +19,25 @@ const orm = {
     INSERT INTO burgers(burger_name, devoured)\
     VALUES (?, ?)";
 
-    connection.query(queryString, [vals1, vals2], err => {
+    connection.query(queryString, [vals.name, vals.devoured], (err,result) => {
       if (err) throw err;
+      cb(result);
     });
   },
 
   // change devoured status
-  eat: (burger_name, cb) => {
+  eat: (burger_id, cb) => {
     const queryString = "\
     UPDATE burgers\
     SET devoured = true\
-    WHERE burger_name = ?";
+    WHERE id = ?";
 
-    connection.query(queryString, [burger_name], err => {
+    connection.query(queryString, [burger_id], (err, result) => {
       if (err) throw err;
+      cb(result);
     });
   }
+
 };
 
 
@@ -41,3 +45,4 @@ module.exports = orm;
 
 // data will be persistent so it will need to load when page is rendered
 // may need to change way callbacks are done (if we even need them)
+// maybe add id response so we can cordinate buttons to match id not just name
