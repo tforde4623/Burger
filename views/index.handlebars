@@ -1,0 +1,37 @@
+<h1>BURGERSSSSSS!</h1>
+
+<!-- change this from uls verticle to side by side later -->
+<!-- undevoured burgers-->
+<h2 style="float: left">
+  <div>Un-eated Burgers!</div>
+  <ul>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burger-block}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+</h2>
+
+<!-- devoured burgers -->
+<h2 style="float: left">
+  <div>Devoured Burgers!</div>
+  <ul>
+    {{#each burgers}}
+     {{#if devoured}}
+        {{> burger-block}}
+      {{/if}}
+    {{/each}}
+  </ul>
+</h2>
+
+
+<!-- form for adding a burger (figure out if we need form group class or not later) -->
+<form class="create_burger">
+  <div class="form-group">
+    <input type="text" id="name_input" name="name_input">
+    <label for="name_input">Enter the name of a burger and click submit!</label>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
