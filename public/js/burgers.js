@@ -22,5 +22,5 @@ $(() => {
       }
     }).then(location.reload());
   });
-
+  
 });
