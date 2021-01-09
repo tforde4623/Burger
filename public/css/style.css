@@ -1,0 +1,12 @@
+body {
+  background-color: aqua;
+}
+
+li {
+  font-size: 24px;
+}
+
+.create_burger {
+  width: 100%;
+  display: inline-block;
+}
