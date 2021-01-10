@@ -10,11 +10,11 @@ const source = {
   },
 
   jawsDB: {
-    host: "",
-    port: "",
-    user: "",
-    password: "",
-    database: ""
+    host: "j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    port: 3306,
+    user: "ud0ohqg5v3w75ns9",
+    password: "tn3uvvx43sq0ej9q",
+    database: "neog1j444f9oxm7v"
   }
 };
 
