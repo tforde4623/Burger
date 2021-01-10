@@ -19,7 +19,7 @@ let connection;
 // };
 
 if (process.env.JAWSDB) {
-  connection = mysql.createConnection(process.env.JAWSDB);
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
 }
 else {
   connection = mysql.createConnection({
