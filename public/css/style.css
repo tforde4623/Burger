@@ -10,3 +10,7 @@ li {
   width: 100%;
   display: inline-block;
 }
+
+.list-title-div {
+  margin: 30px;
+}

@@ -7,13 +7,11 @@ $(() => {
     $.ajax({
       url: `/api/burgers/${id}`,
       type: 'PUT'
-    }).then(() => location.reload());
+    }).then(location.reload());
   });
 
   // listener for adding a burger
   $('.create_burger').on('submit', function (event) {
-    event.preventDefault();
-
     $.ajax({
       url: '/api/burgers',
       type: 'POST',

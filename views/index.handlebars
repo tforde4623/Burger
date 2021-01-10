@@ -3,7 +3,7 @@
 <!-- change this from uls verticle to side by side later -->
 <!-- undevoured burgers-->
 <h2 style="float: left">
-  <div>Un-eated Burgers!</div>
+  <div class="list-title-div">Un-eated Burgers!</div>
   <ul>
     {{#each burgers}}
       {{#unless devoured}}
@@ -15,7 +15,7 @@
 
 <!-- devoured burgers -->
 <h2 style="float: left">
-  <div>Devoured Burgers!</div>
+  <div class="list-title-div">Devoured Burgers!</div>
   <ul>
     {{#each burgers}}
      {{#if devoured}}
